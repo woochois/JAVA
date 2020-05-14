@@ -13,7 +13,8 @@ public class Sale {
 		System.out.print("주문 수량을 입력해주세요. : ");
 		int quantity = scan.nextInt();
 		int total = price*quantity;
-		if(quantity >= 10) System.out.println("할인된 가격은 " + (total - total/10) + "원 입니다.");
+		if(quantity >= 10) System.out.println("총 가격은 " + (total - total/10) + "원 입니다.");
+		if(quantity >= 10) System.out.println("할인된 금액은 " + (total/10) + "원 입니다.");
 		else System.out.println("총 가격은 " + total + "원 입니다.");
 
 	}
