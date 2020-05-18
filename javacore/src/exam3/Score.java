@@ -17,10 +17,10 @@ public class Score {
 		3. 결과 출력
 		*/
 		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("당신의 시험 점수를 입력하시오. : ");
-		int score = scan.nextInt();
+//		Scanner scan = new Scanner(System.in);
+//		
+//		System.out.print("당신의 시험 점수를 입력하시오. : ");
+//		int score = scan.nextInt();
 		
 //		if(score >= 90) {
 //			if(score >= 95) {
@@ -40,27 +40,59 @@ public class Score {
 //			}else System.out.println("당신의 평점은 D입니다.");
 //		}else System.out.println("당신의 평점은 F입니다. 낙제 축하드립니다.");
 
-		String message = "";
-		if(score >= 90) {
-			if(score >= 95) {
-				message = "A+";
-			}else message = "A";
-		}else if(score >= 80) {
-			if(score >= 85) {
-				message = "B+";
-			}else message = "B";
-		}else if(score >= 70) {
-			if(score >= 75) {
-				message = "C+";
-			}else message = "C";
-		}else if(score >= 60) {
-			if(score >= 65) {
-				message = "D+";
-			}else message = "D";
-		}else message = "F";
+//		String message = "";
+//		if(score >= 90) {
+//			if(score >= 95) {
+//				message = "A+";
+//			}else message = "A";
+//		}else if(score >= 80) {
+//			if(score >= 85) {
+//				message = "B+";
+//			}else message = "B";
+//		}else if(score >= 70) {
+//			if(score >= 75) {
+//				message = "C+";
+//			}else message = "C";
+//		}else if(score >= 60) {
+//			if(score >= 65) {
+//				message = "D+";
+//			}else message = "D";
+//		}else message = "F";
 
-		System.out.println("당신의 평점은 " + message + "입니다.");
+//		System.out.println("당신의 평점은 " + message + "입니다.");\
 		
+		
+//		선생님 코드
+		
+		int score = 0;
+		String grade = ""; // 공백값
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("과학 점수를 입력하시오. : ");
+		score = scan.nextInt();		
+		
+		if(score>=90) {
+			grade = "A"; 
+			if(score>=95) grade += "+";
+		}
+		else if(score>=80) {
+			grade = "B";
+			if(score>=85) grade += "+";
+		}
+		else if(score>=70) {
+			grade = "C";
+			if(score>=75) grade += "+";
+		}
+		else if(score>=60) {
+			grade = "D";
+			if(score>=65) grade += "+";
+		}
+		else grade = "F";
+		
+		System.out.println("당신의 시험 결과는 ? : " + grade);
+		
+
+
 	}
 
 }
