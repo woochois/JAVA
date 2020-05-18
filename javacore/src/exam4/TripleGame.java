@@ -31,24 +31,23 @@ public class TripleGame {
 		
 		String result = scanner.next(); // 플레이어 선택값 
 		
-		int result2 = (random.nextInt(3) + 1) % 3; // 컴퓨터 랜덤 선택값
+		int result2 = random.nextInt(3); // 컴퓨터 랜덤 선택값
 		int ran = random.nextInt(50) + 1; // 구슬 50개 중 랜덤 선택값
-
 		
-//		에러가 발생하면 강제종료하는 코드
+//		에러가 발생하면 강제종료코드
 		if (result.equals("어치")) {
 			if (result2 == 1) {
-				System.out.println("에러 발생!!!");
+				System.out.println("에러 발생!!!\n중복된 값을 선택하셨습니다.");
 				System.exit(0);
 			}
 		} else if (result.equals("니")) {
 			if (result2 == 2) {
-				System.out.println("에러 발생!!!");
+				System.out.println("에러 발생!!!\n중복된 값을 선택하셨습니다.");
 				System.exit(0);
 			}
 		} else if (result.equals("쌈")) {
 			if (result2 == 0) {
-				System.out.println("에러 발생!!!");
+				System.out.println("에러 발생!!!\n중복된 값을 선택하셨습니다.");
 				System.exit(0);
 			}
 		}
