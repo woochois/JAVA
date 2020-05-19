@@ -35,7 +35,7 @@ public class TripleGame {
 		int ran = random.nextInt(50) + 1; // 구슬 50개 중 랜덤 선택값
 		
 //	중복값 선택 시, 에러발생 강제종료코드
-		
+/*
 		if (result.equals("어치")) {
 			if (result2 == 1) {
 				System.out.println("컴퓨터의 선택 : 어치 \n에러 발생!!!\n중복된 값을 선택하셨습니다.\n강제종료합니다. 프로그램을 다시 시작해주세요.");
@@ -52,7 +52,7 @@ public class TripleGame {
 				System.exit(0);
 			}
 		} else System.out.println("잘못된 값을 입력하셨습니다. \n강제종료합니다. \n프로그램을 다시 시작해주세요.");
-		
+*/	
 		
 
 //		과제 코드
