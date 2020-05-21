@@ -1,12 +1,12 @@
 package com.hk.app4;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Loop2 {
 
 	public static void main(String[] args) {
 
-		
 		// while 문으로 1 ~ 100 까지 누적 합
 		int sum = 0;
 		int x = 1; // --> 100
@@ -66,7 +66,173 @@ public class Loop2 {
 				if(n == 7) break;
 				System.out.print(rnum + " ");
 			}
+
+		  
+		  //------------------------------------- 다음 날 수업 ----------------------------------------------- 
+		  
+		  // while 복습 
+		  // [연습 예제] // 1 ~ 100 까지 누적합
+		  // 1 2 3 4 5 ... 100 = 5050 
+		  // 합이 100 넘는 순간 멈추고 
+		  // 결과값, 넘는 순간 ?
+		  
+		  int sumr = 0; // 최종합 저장 
+		  int xr = 1; // 1 -> 계속 간다 +1 
+		  System.out.println(xr + " - " + sumr + "시작값"); 
+		  System.out.println("-----------------"); 
+		  while(true) { // 참이면 무한 루프
+		  
+			  sumr += xr;
+			  System.out.println(xr + " - " + sumr);
+		      if(sumr>=100) break; 
+			  xr++; 
+			  }
+		  
+		  // [연습 예제] 무한루프를 돌다가 sum = 1,000,000,000 원 
+		  // 하루에 2220,000원 sum = 0 멈춤 
+		  // 몇번째 멈추는가?
+		  
+		  int bank = 1000000000; // 10억 
+		  int consume = 2220000; 
+		  int day = 1;	  // 하루 평균 222만원 사용
+		  
+		  while(true) { bank -= consume;
+		  
+		  if(bank <= 0) { break; } System.out.println(day + "일 " + bank); day++; }
+		  
+		  // Continue
+		  
+		  for(int i1 = 1; i1 <= 100; i1++) { if(i1%3==0)continue;
+		  if(i1%10==0)System.out.println("순서=짝짝"); else System.out.println("순서="+i1);
+		  if(i1>30) break; }
+		 
+		// break문 : 반복문을 멈추는 역할
+		// continue문 : 반복문을 전부 돌지만 조건에 따라 건너뜀
+		// 1 ~ 100까지 짝수를 합
+		// 방법 1. %
+		// 방법 2. %, continue
+
+		// 방법 1.
+		int sum1 = 0;
+		for (int i1 = 0; i1 <= 100; i1++) {
+			if (i1 % 2 == 0)
+				sum1 += i1;
+		}
+		System.out.println(sum1);
+
+		int num1 = 0;
+		int tot1 = 0;
+		while (true) {
+			if (num1 % 2 == 0) {
+				tot1 += num1;
+				num1++;
+			}
+			break;
+		}
+		System.out.println(tot1);
+
+		// 방법 2.
+		int sum21 = 0;
+		for (int i1 = 0; i1 <= 100; i1++) {
+			if (i1 % 2 == 1) {
+				continue;
+			}
+			sum21 += i1;
+		}
+		System.out.println(sum21);
+
+		// 1 ~ 100까지 반복 (int i를 사용해서)
+		// 2의 배수 또는 3의 배수가 아니면 건너뛰고 3의 배수는 더해주고
+		int sum3 = 0;
+		for (int h = 1; h <= 100; h++) {
+			if (h % 2 == 0 || h % 3 != 0) continue;
+			sum3 += h;
+		}
+		System.out.println(sum3);
+		
+		// do while문
+		// 입력을 반복해서 받는데 입력값이 0이면 프로그램 종료
+
+		int test = 0;
+		int input = 0;
+		Scanner scan = new Scanner(System.in);
+
+		while(input != 0) {
+			System.out.print("숫자를 입력하시오. : ");
+			input = scan.nextInt();
+			test += input;
+		}System.out.println("결과는 : " + test);
+
+		int snum = 0;
+		int input2 = 10;
+		
+		do {
+			System.out.print("정수를 입력하시오. : ");
+			input2 = scan.nextInt();
+			snum += input2;
+		} while(input2 != 0); // 조건 식이 뒤에 붙음
+		System.out.println(snum);
+
+		// [연습 예제]
+		// 세자리의 숫자를 만들려고 합니다.
+		// 123, 234, 567, ... 가능 - 131, 224, 555, ... 중복값이 하나라도 있으면 불가능
+		// 100 * x , 10 * y , 1 * z - 3개의 숫자를 랜덤
+
+		Random ran = new Random();
+		
+		int x = 0; // 100의 자리
+		int y = 0; // 10의 자리
+		int z = 0; // 1의 자리
+		
+		while(true){
+			x = ran.nextInt(9) + 1; // (1 ~ 9)
+			y = ran.nextInt(9) + 1; // (1 ~ 9)
+			z = ran.nextInt(9) + 1; // (1 ~ 9)
+
+			if(x != y && y != z && z != x) {
+				x *= 100;
+				y *= 10;
+				z *= 1;
+				System.out.println(x + y + z);
+			}
+			
+			if (x == y && y == z && z == x) {
+				break;
+			}
+			
+		}
+		
+		// 강사님 코드
+		
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		Random zen = new Random();
+		while(true) {
+			x=zen.nextInt(9)+1;
+			y=zen.nextInt(9)+1;
+			z=zen.nextInt(9)+1;
+			if(x!=y&&y!=z&&y!=z) {
+				break;
+			}
+		}
+		System.out.println(""+x+y+z);
+
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		Random zen = new Random();
+		
+		do {
+			x=zen.nextInt(9)+1;
+			y=zen.nextInt(9)+1;
+			z=zen.nextInt(9)+1;
+		}while(x==y||y==z||z==x);
+		System.out.println(""+x+y+z);
+		
+		// x 하나만 랜덤 수로 생성 후, x 와 y, z 를 비교해서 코드 간결화 시켜보기
+		
+		
 	}
 
 }
- 
