@@ -8,10 +8,10 @@ public class TripleGame {
 
 		/*
 		트리플게임
-		어치 니 쌈 게임 
+		어지 니 쌈 게임 
 		구슬이 50개 - 랜덤으로 개수를 뽑음 
 		
-		어치(랜덤%3==1)
+		어지(랜덤%3==1)
 		니(랜덤%3==2)
 		쌈(랜덤%3==0)
 		 
@@ -22,11 +22,11 @@ public class TripleGame {
 		
 		Random random = new Random();
 
-		String res = ""; // 어치 니 쌈 지정 문자열
+		String res = ""; // 어지 니 쌈 지정 문자열
 		String res2 = ""; // 승부 결과 출력
 		String res3 = ""; // 컴퓨터 선택 출력
 		
-		System.out.print("어치, 니, 쌈 중에 하나를 선택하시오. : ");
+		System.out.print("어지, 니, 쌈 중에 하나를 선택하시오. : ");
 		Scanner scanner = new Scanner(System.in);
 		
 		String result = scanner.next(); // 플레이어 선택값 
@@ -36,9 +36,9 @@ public class TripleGame {
 		
 //	중복값 선택 시, 에러발생 강제종료코드
 /*
-		if (result.equals("어치")) {
+		if (result.equals("어지")) {
 			if (result2 == 1) {
-				System.out.println("컴퓨터의 선택 : 어치 \n에러 발생!!!\n중복된 값을 선택하셨습니다.\n강제종료합니다. 프로그램을 다시 시작해주세요.");
+				System.out.println("컴퓨터의 선택 : 어지 \n에러 발생!!!\n중복된 값을 선택하셨습니다.\n강제종료합니다. 프로그램을 다시 시작해주세요.");
 				System.exit(0);
 			}
 		} else if (result.equals("니")) {
@@ -57,11 +57,11 @@ public class TripleGame {
 
 //		과제 코드
 		if (ran % 3 == 1) {
-			res = "어치"; // 나온 구슬 결과값
-			if (result.equals("어치")) {
+			res = "어지"; // 나온 구슬 결과값
+			if (result.equals("어지")) {
 				if (result2 == 1) {
 					res2 = "에러 발생!!!"; // 승부 결과값
-					res3 = "어치"; // 컴퓨터의 선택값
+					res3 = "어지"; // 컴퓨터의 선택값
 				} else if (result2 == 0) {
 					res2 = "플레이어 승리";
 					res3 = "쌈";
@@ -104,7 +104,7 @@ public class TripleGame {
 					res3 = "쌈";
 				} else if (result2 == 1) {
 					res2 = "플레이어 승리";
-					res3 = "어치";
+					res3 = "어지";
 				}
 			} else if (result.equals("쌈")) {
 				if (result2 == 2) {
@@ -115,9 +115,9 @@ public class TripleGame {
 					res3 = "쌈";
 				} else if (result2 == 1) {
 					res2 = "무승부";
-					res3 = "어치";
+					res3 = "어지";
 				}
-			} else if (result.equals("어치")) {
+			} else if (result.equals("어지")) {
 				if (result2 == 2) {
 					res2 = "컴퓨터 승리"; // 승부 결과값
 					res3 = "니"; // 컴퓨터의 선택값
@@ -126,7 +126,7 @@ public class TripleGame {
 					res3 = "쌈";
 				} else if (result2 == 1) {
 					res2 = "에러 발생!!";
-					res3 = "어치";
+					res3 = "어지";
 				}
 			}
 		} else if (ran % 3 == 0) {
@@ -137,18 +137,18 @@ public class TripleGame {
 					res3 = "쌈"; // 컴퓨터의 선택값
 				} else if (result2 == 1) {
 					res2 = "플레이어 승리";
-					res3 = "어치";
+					res3 = "어지";
 				} else if (result2 == 2) {
 					res2 = "플레이어 승리";
 					res3 = "니";
 				}
-			} else if (result.equals("어치")) {
+			} else if (result.equals("어지")) {
 				if (result2 == 0) {
 					res2 = "컴퓨터 승리"; // 승부 결과값
 					res3 = "쌈"; // 컴퓨터의 선택값
 				} else if (result2 == 1) {
 					res2 = "에러 발생!!!";
-					res3 = "어치";
+					res3 = "어지";
 				} else if (result2 == 2) {
 					res2 = "무승부";
 					res3 = "니";
@@ -159,7 +159,7 @@ public class TripleGame {
 					res3 = "쌈"; // 컴퓨터의 선택값
 				} else if (result2 == 1) {
 					res2 = "무승부";
-					res3 = "어치";
+					res3 = "어지";
 				} else if (result2 == 2) {
 					res2 = "에러 발생!!";
 					res3 = "니";
