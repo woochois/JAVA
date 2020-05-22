@@ -178,25 +178,25 @@ public class Loop2 {
 		// 123, 234, 567, ... 가능 - 131, 224, 555, ... 중복값이 하나라도 있으면 불가능
 		// 100 * x , 10 * y , 1 * z - 3개의 숫자를 랜덤
 
-		Random ran = new Random();
+		Random ran2 = new Random();
 		
-		int x = 0; // 100의 자리
-		int y = 0; // 10의 자리
-		int z = 0; // 1의 자리
+		int xx = 0; // 100의 자리
+		int yy = 0; // 10의 자리
+		int zz = 0; // 1의 자리
 		
 		while(true){
-			x = ran.nextInt(9) + 1; // (1 ~ 9)
-			y = ran.nextInt(9) + 1; // (1 ~ 9)
-			z = ran.nextInt(9) + 1; // (1 ~ 9)
+			xx = ran.nextInt(9) + 1; // (1 ~ 9)
+			yy = ran.nextInt(9) + 1; // (1 ~ 9)
+			zz = ran.nextInt(9) + 1; // (1 ~ 9)
 
-			if(x != y && y != z && z != x) {
-				x *= 100;
-				y *= 10;
-				z *= 1;
-				System.out.println(x + y + z);
+			if(xx != yy && yy != zz && zz != xx) {
+				xx *= 100;
+				yy *= 10;
+				zz *= 1;
+				System.out.println(xx + yy + zz);
 			}
 			
-			if (x == y && y == z && z == x) {
+			if (xx == yy && yy == zz && zz == xx) {
 				break;
 			}
 			
@@ -204,31 +204,31 @@ public class Loop2 {
 		
 		// 강사님 코드
 		
-		int x = 0;
-		int y = 0;
-		int z = 0;
+		int x1 = 0;
+		int y1 = 0;
+		int z1 = 0;
 		Random zen = new Random();
 		while(true) {
-			x=zen.nextInt(9)+1;
-			y=zen.nextInt(9)+1;
-			z=zen.nextInt(9)+1;
-			if(x!=y&&y!=z&&y!=z) {
+			x1=zen.nextInt(9)+1;
+			y1=zen.nextInt(9)+1;
+			z1=zen.nextInt(9)+1;
+			if(x1!=y1&&y1!=z1&&y!=z1) {
 				break;
 			}
 		}
-		System.out.println(""+x+y+z);
+		System.out.println(""+x1+y1+z1);
 
-		int x = 0;
-		int y = 0;
-		int z = 0;
-		Random zen = new Random();
+		int x2 = 0;
+		int y2 = 0;
+		int z2 = 0;
+		Random zen2 = new Random();
 		
 		do {
-			x=zen.nextInt(9)+1;
-			y=zen.nextInt(9)+1;
-			z=zen.nextInt(9)+1;
-		}while(x==y||y==z||z==x);
-		System.out.println(""+x+y+z);
+			x2=zen.nextInt(9)+1;
+			y2=zen.nextInt(9)+1;
+			z2=zen.nextInt(9)+1;
+		}while(x2==y2||y2==z2||z2==x2);
+		System.out.println(""+x2+y2+z2);
 		
 		// x 하나만 랜덤 수로 생성 후, x 와 y, z 를 비교해서 코드 간결화 시켜보기
 		
