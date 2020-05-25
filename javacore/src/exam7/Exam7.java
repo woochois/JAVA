@@ -1,5 +1,6 @@
 package exam7;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exam7 {
@@ -56,6 +57,26 @@ public class Exam7 {
 			String input = scan.next(); 
 			pr[i] = input;
 		}System.out.print(pr[0] + " " + pr[2] + " " + pr[4]);
+/*		
+		6. 두 자리의 숫자를 랜덤하게 생성하여 배열 num에 저장하고
+		(자리 숫자가 중복되지 않게)
+		키보드를 통해 두 자리의 숫자를 입력받는다(자리 숫자가 중복되거
+		나 두 자리가 아니면 다시 입력받음)
+		랜덤핚 숫자와 입력핚 숫자를 비교하여 랜덤핚 숫자가 입력핚 숫자
+		보다 큰지 작은지를 출력하고 숫자가 같아질 때까지 반복핚다
+		숫자가 같아지면 입력횟수와 맞춘 숫자를 출력하시오
+*/		
+		double r2num = Math.random();
+		Scanner r2scan = new Scanner(System.in);
+		int[] numA = new int[1];
+		int answer = (int)(r2num * 100) + 10;
+		
+		System.out.println("두 자리의 숫자를 입력하시오. : "); 
+		int r2s = r2scan.nextInt();
+		numA[0] = r2s;
+		numA[1] = answer;
+		System.out.println(numA[0]);
+		System.out.println(numA[1]);
 		
 	}
 }
