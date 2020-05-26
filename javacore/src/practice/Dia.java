@@ -7,7 +7,7 @@ public class Dia {
 			for(int j = 1; j < 5 - i; j++){ // ex) i가 0이면 빈칸 4개 , i가 1이면 빈칸 3개 ...
 				System.out.print(" "); 
 			}
-			for(int j = 0; j < 2 * i + 1; j++){ // ex) i가 0이면 별 x, i가 1이면 별 3개 ... 2개씩 증가
+			for(int j = 0; j < 2 * i + 1; j++){ // ex) i가 0이면 별 1개, i가 1이면 별 3개 ... 2개씩 증가
 				System.out.print("*"); 
 			}
 			System.out.println("");
