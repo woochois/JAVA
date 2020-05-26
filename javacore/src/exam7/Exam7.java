@@ -66,17 +66,64 @@ public class Exam7 {
 		보다 큰지 작은지를 출력하고 숫자가 같아질 때까지 반복핚다
 		숫자가 같아지면 입력횟수와 맞춘 숫자를 출력하시오
 */		
-		double r2num = Math.random();
-		Scanner r2scan = new Scanner(System.in);
-		int[] numA = new int[1];
-		int answer = (int)(r2num * 100) + 10;
+
+		// 선생님 코드	
+		//1
+		int[] num1 = new int[2]; // 컴퓨터의 두 개의 수 받아오는 배열 2칸
+		Random zen = new Random(); // 랜덤 수
+		int count = 0; // 돌린 횟수
 		
-		System.out.println("두 자리의 숫자를 입력하시오. : "); 
-		int r2s = r2scan.nextInt();
-		numA[0] = r2s;
-		numA[1] = answer;
-		System.out.println(numA[0]);
-		System.out.println(numA[1]);
+		while(true) {
+			num1[0] = zen.nextInt(9)+1; //1-9 : 10의 자리
+			num1[1] = zen.nextInt(10);  //0-9 : 1의 자리 
+			if(num1[0]!=num1[1]) { // 중복되는 수가 아니면 컴퓨터 수 확정
+				break;
+			}
+		}
+		System.out.println("컴퓨터 랜덤 숫자=" + (num1[0]*10+num1[1])); // 컴퓨터의 랜덤 숫자
+		
+		//2
+		int[] num2 = new int[2]; // 사용자의 두 개의 수 받아오는 배열 2칸
+		Scanner scan1 = new Scanner(System.in);
+		int input = 0; // 기본 입력값
+		
+		while(true) // 정답을 맞출 때까지 반복
+		{
+			while(true) { // 중복되는 숫자 분별
+				// 사용자 입력
+				System.out.print("두 자리숫자를 입력하시오=");
+				input = scan1.nextInt();
+				
+				// 10의 자리 수와 1의 자리 수 비교
+				num2[0] = input / 10; // 10의 자리 ex) 21 / 10 = 2
+				num2[1] = input % 10; // 1의 자리  ex) 21 % 10 = 1 
+				
+				if(input > 9 && input < 99) // 사용자가 입력한 값의 범위 판별 ( 한 자리 수, 세 자리 수가 아니면)
+				{					
+					if(num2[0]!=num2[1]) {  // 10의자리와 1의자리 중복값 판별
+						count++; // 돌린 횟수 증가
+						break;
+					}else {
+						System.out.println("다시 입력하시오"); // 10의자리와 1의자리 중복되면
+						count++; // 돌린 횟수 증가
+					}
+				}else {
+					System.out.println("다시 입력하시오"); // 한 자리 수 거나 세 자리 수면
+					count++; // 돌린 횟수 증가
+				}
+			}
+			
+			//3
+			if(num1[0]*10+num1[1] > input) {
+				System.out.println(input + " 보다 컴퓨터 랜덤숫자가 큽니다!");
+			}else if(num1[0]*10+num1[1] < input) {
+				System.out.println(input + " 보다 컴퓨터 랜덤숫자가 작습니다!");
+			}else {
+				System.out.println("정답 맞습니다. \n 입력한 횟수 : " + count);
+				break;
+			}
+		}	
+		
 		
 	}
 }

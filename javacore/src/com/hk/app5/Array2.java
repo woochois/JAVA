@@ -14,7 +14,7 @@ public class Array2 {
 		...
 		ran[9] 홀수와 짝수를 분리해서 출력
 		*/
-/*		
+	
 		// 정수배열생성
 		int[] ArrRandom = new int[10];
 		// 랜덤값
@@ -67,11 +67,11 @@ public class Array2 {
 			System.out.print(score2[r][c] + " "); 
 		
 		System.out.println(); // 가독성을 위해 한 칸 뛰기
-		
+		}
 		// 2+1번 학생의 국, 영, 수 점수 출력
-		int r = 2;
+		int r1 = 2;
 		for(int cc = 0; cc < 3; cc++) {
-			System.out.print(score2[r][cc] + " ");
+			System.out.print(score2[r1][cc] + " ");
 		}
 		System.out.println(); // 가독성을 위해 한 칸 뛰기
 		
@@ -169,31 +169,34 @@ public class Array2 {
 		for(int i = 0; i < des3.length; i++) {
 			System.out.print(des3[i] + " ");
 		}
-*/
-//		1. 1반부터 6반까지의 int[] avg 평균점수를 저장한 후, 
-//			(반별 평균점수는 초기값으로 1반부터 차례로 85 79 83 80 78 75로 초기화한다)
-//			두 반의 반 번호를 입력받아 두 반 평균 점수의 합을 출력하는 프로그램을 작성하시오.
-//			[키보드 입력 예]
-//			첫 번째 반 : 1
-//			두 번째 반 : 3
-//			(주의점 : 반 번호, 배열 번호 다름)
-//			두 반의 평균점수 합은 : 168
 		
+//		1. 1반부터 6반까지의 int[] avg 평균점수를 저장한 후, 
+//		(반별 평균점수는 초기값으로 1반부터 차례로 85 79 83 80 78 75로 초기화한다)
+//		두 반의 반 번호를 입력받아 두 반 평균 점수의 합을 출력하는 프로그램을 작성하시오.
+//		[키보드 입력 예]
+//		첫 번째 반 : 1
+//		두 번째 반 : 3
+//		(주의점 : 반 번호, 배열 번호 다름)
+//		두 반의 평균점수 합은 : 168
+	
 		// 반별 평균점수 초기값
 		int[] avg = {85, 79, 83, 80, 78, 75};
 		// 두 반의 반 번호 입력
-		Scanner scan = new Scanner(System.in);
-		// 첫 번째 반 번호 입력
-		int num1 = scan.nextInt();
-		// 두 번째 반 번호 입력
-		int num2 = scan.nextInt();
-		// 두 반 평균 점수의 합		
-		if(num1 != num2) {
-			sum = int[num1] avg + int[num2] avg;
-			System.out.println("두 반의 평균점수 합은 : " + sum);
+		Scanner scan1 = new Scanner(System.in);
+		// 두 반 평균 점수의 합
+		while(true) {
+			// 첫 번째 반 번호 입력
+			System.out.print("첫 번쨰 반 번호 입력 : ");
+			int i = scan1.nextInt();
+			// 두 번째 반 번호 입력
+			System.out.print("두 번쨰 반 번호 입력 : ");
+			int j = scan1.nextInt();
+			if(i != j) { // 입력된 두 반이 같지 않으면
+					int sum = avg[i-1]; // 배열의 주소값은 0에서부터 시작
+					int sum2 = avg[j-1]; // 배열의 주소값은 0에서부터 시작
+					System.out.println("두 반의 평균점수 합은 : " + (sum+sum2));
+					break;
+			} else System.out.println("같은 반입니다. 다시 입력해주세요."); // 같은 반 입력했을 시 다시 입력
 		}
-		
-		
-		
 	}
 }
