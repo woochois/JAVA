@@ -29,6 +29,7 @@ public class Exam8 {
 			}System.out.println();
 		}System.out.println();
 		
+				
 		for(int i = 0; i < 5; i++) {
 			for(int j = 0; j < i + 1; j++) {
 				System.out.print("* ");
@@ -70,22 +71,24 @@ public class Exam8 {
 /* 
  * 		번외 . 다이아몬드 찍기
  */
-		for(int i = 0; i < 4; i++) {
-			for(int j = 3; j >= i; j--) {
-				System.out.print(" ");
+		do {
+			for(int i = 0; i < 4; i++) {
+				for(int j = 3; j >= i; j--) {
+					System.out.print(" ");
+				}
+				for(int j = 0; j < i + 1; j++) {
+					System.out.print("* ");
+				}System.out.println();
 			}
-			for(int j = 0; j < i + 1; j++) {
-				System.out.print("* ");
+			for(int i = 0; i < 5; i++) {
+				for(int j = 0; j < i; j++) {
+					System.out.print(" ");
+				}
+				for(int j = 4; j >= i; j--) {
+					System.out.print("* ");
+				}System.out.println();
 			}System.out.println();
-		}
-		for(int i = 0; i < 5; i++) {
-			for(int j = 0; j < i; j++) {
-				System.out.print(" ");
-			}
-			for(int j = 4; j >= i; j--) {
-				System.out.print("* ");
-			}System.out.println();
-		}System.out.println();
+		}while(false);
 		
 /*
 		5. 다음 중 클래스가 아니고 객체라고 볼 수 있는 것은 무엇인가?
@@ -115,6 +118,9 @@ public class Exam8 {
 		Watch : 클래스 - 연관되어 있는 변수와 메서드의 집합
 		*omega : 객체 - 클래스에 선언된 모양 그대로 생성된 실체
 */
+		
+		
+		
 	}
 
 }
