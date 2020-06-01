@@ -16,15 +16,14 @@ public class Ex2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("출력할 단은 : ");
-		System.out.print(gugudan(scan.nextInt()));
+		gugudan(scan.nextInt());
 	}
 	
-	static int gugudan(int a) {
+	public static void gugudan(int a) {
 		for(int i = a; i < a + 1; i++) {
 			for(int j = 1; j < 10; j++) {
 				System.out.println(a + " * " + j + " = " + (i * j));
 			}
 		}
-		return 0;
 	}
 }

@@ -19,33 +19,38 @@ public class Monitor {
 	static String color;
 	static double size;
 	
-	private static void GetBrand() {
-		
+	public static String getBrand() {
+		return brand;
 	}
-	private static void GetColor() {
-		
-	}
-	private static void GetSize() {
-		
-	}
-	private static void SetBrand(String brand) {
-		
-	}
-	private static void SetColor(String color) {
-		
-	}
-	private static void SetSize(double size) {
-		
-	}
-	public static void main(String[] args) {
 
-		GetBrand();
-		GetColor();
-		GetSize();
+	public static void setBrand(String brand) {
+		Monitor.brand = brand;
+	}
+
+	public static String getColor() {
+		return color;
+	}
+
+	public static void setColor(String color) {
+		Monitor.color = color;
+	}
+
+	public static double getSize() {
+		return size;
+	}
+
+	public static void setSize(double size) {
+		Monitor.size = size;
+	}
+
+	public static void main(String[] args) {
+		setBrand(brand);
+		setColor(color);
+		setSize(size);
 		
-		SetBrand(brand);
-		SetColor(color);
-		SetSize(size);
+		getBrand();
+		getColor();
+		getSize();
 	}
 	
 }

@@ -13,23 +13,29 @@ public class Student {
 	static String id;
 	static String name;
 	
-	private static void GetId() {
-		
+
+	
+	public static String getId() {
+		return id;
 	}
-	private static void GetName() {
-		
+
+	public static void setId(String id) {
+		Student.id = id;
 	}
-	private static void SetId(String id) {
-		
+
+	public static String getName() {
+		return name;
 	}
-	private static void SetName(String name) {
-		
+
+	public static void setName(String name) {
+		Student.name = name;
 	}
-	public static void main(String[] args) {
-		GetId();
-		GetName();
-		SetId(id);
-		SetName(name);
+
+	public static void main(String[] args) {	
+		setId(id);
+		setName(name);
+		getId();
+		getName();
 	}
 	
 }

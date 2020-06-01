@@ -8,14 +8,13 @@ public class Ex1_2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("출력할 횟수는 : ");
-		System.out.print(javafunction(scan.nextInt()));
+		javafunction(scan.nextInt());
 	}
 	
-	static int javafunction(int a) {
-		
+	public static void javafunction(int a) {
 		for(int i = 0; i < a; i++) {
 			System.out.println(" Java Function ");
 		}
-		return  a;	
+			
 	}
 }
