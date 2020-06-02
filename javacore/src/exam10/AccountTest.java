@@ -6,13 +6,13 @@ public class AccountTest {
 			
 			int kakaoB = 10000; 
 			int naverB = 20000;
-			
 
-			ac.rateY = ac.SetRate(0.05d); // 연이율 5%
+			ac.rateY = ac.SetRate(0.05); // 연이율 5%
 			kakaoB = ac.calBalForMonth(kakaoB); // 첫 달 이자 포함 잔액 
 			naverB = ac.calBalForMonth(naverB); // 첫 달 이자 포함 잔액 
 			System.out.println(kakaoB + " " + naverB);
-			ac.rateY = ac.SetRate(0.06d); // 연이율 6%
+			
+			ac.rateY = ac.SetRate(0.06); // 연이율 6%
 			kakaoB = ac.calBalForMonth(kakaoB); // 두 번째 달 이자 포함 잔액
 			naverB = ac.calBalForMonth(naverB); // 두 번째 달 이자 포함 잔액
 			System.out.println(kakaoB + " " + naverB);
