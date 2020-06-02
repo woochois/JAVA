@@ -17,13 +17,14 @@ public class BallUtils extends Shape3dVo{
 	}
 
 	double CalcVolume() {
-		result = ((x / y) * (3.14 * Radius));
+		result = ((x / y) * (3.14 * Math.pow(Radius, 3)));
 		return result;
 	}
 	
 	public static void main(String[] args) {
 		BallUtils bu = new BallUtils(4,3,5,10);
+		System.out.print("구하고자 하는 원의 부피는 : ");
 		System.out.println(bu.CalcVolume());
-		System.out.println(x+","+y+","+z+","+Radius);
+		System.out.println("x 좌표 : "+x+" , "+"y 좌표 : "+y+" , "+"z 좌표 : "+z+" , "+"반지름 : "+Radius);
 	}
 }
