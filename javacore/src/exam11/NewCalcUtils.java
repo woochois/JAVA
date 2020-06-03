@@ -2,7 +2,7 @@ package exam11;
 
 public class NewCalcUtils extends CalcUtils{
 	
-	double avg() {
+	double avg() {  // 오버라이딩 ( 기존 생성자를 재정의 )
 		this.result = (left + right) / 2;
 		return this.result;
 	}
