@@ -2,7 +2,7 @@ package exam11;
 
 public class CalcUtils {
 	
-	int left, right, third, result;
+	int left, right, third;
 
 	void setOprands(int a, int b){ 
 		this.left = a;
@@ -15,14 +15,13 @@ public class CalcUtils {
 		this.third = c;
 	}
 	
-	int sum() {
-		result = left + right + third;
-		return result;
+	void sum() {
+		System.out.println(left + right + third);
 	}
 	
-	double avg() {
-		if(third == 0) result = (left + right) / 2;
-		else result = (left + right + third) / 3; 
-		return result;
+	void avg() {
+		if(third == 0) System.out.println((left + right) / 2);
+		else System.out.println((left + right + third) / 3); 
+
 	}
 }

@@ -6,13 +6,17 @@ public class TestCalc {
 		CalcUtils cal = new CalcUtils();
 		
 		cal.setOprands(10, 20);
-		System.out.println(cal.sum());
-		System.out.println(cal.avg());
+		cal.sum();
+		cal.avg();
 		
 		cal.setOprands(10, 20, 30);
-		System.out.println(cal.sum());
-		System.out.println(cal.avg());
+		cal.sum();
+		cal.avg();
 
+		NewCalcUtils ncal = new NewCalcUtils();
+		ncal.setOprands(10, 20);
+		ncal.sum();
+		ncal.avg();
+		ncal.substract();
 	}
-	
 }
