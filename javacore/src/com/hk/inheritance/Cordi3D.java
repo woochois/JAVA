@@ -1,4 +1,4 @@
-package com.kr.inheritance;
+package com.hk.inheritance;
 
 public class Cordi3D extends Cordi{
 	int z;

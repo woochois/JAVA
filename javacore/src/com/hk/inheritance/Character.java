@@ -1,4 +1,4 @@
-package com.kr.inheritance;
+package com.hk.inheritance;
 
 // 클래스 정의
 public class Character { // 캐릭터

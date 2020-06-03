@@ -1,4 +1,4 @@
-package com.kr.inheritance;
+package com.hk.inheritance;
 
 public class Animal extends Unit{ // 자식 클래스
 	int leg; // 다리

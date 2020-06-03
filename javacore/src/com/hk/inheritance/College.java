@@ -1,4 +1,4 @@
-package com.kr.inheritance;
+package com.hk.inheritance;
 
 public class College extends Learner{
 	

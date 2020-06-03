@@ -1,4 +1,4 @@
-package com.kr.inheritance;
+package com.hk.inheritance;
 
 public class Marine extends Unit{ // 자식클래스
 	String weapon; // 총 , 칼

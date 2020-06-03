@@ -1,4 +1,4 @@
-package com.kr.inheritance;
+package com.hk.inheritance;
 
 // 토끼 클래스 정의
 public class Rabbit extends Character{
