@@ -44,7 +44,9 @@ public static void main(String[] args) {
       System.out.println("드라이버 접속실패");
       e2.printStackTrace();
    } finally {
-	   // if(rs!=null) { rs.close(); rs=null; } // 정리작업
+	   if(rs!=null) { try{rs.close(); rs=null;}catch(SQLException e){} } // 정리작업
+	   if(stmt!=null) { try{stmt.close(); stmt=null;}catch(SQLException e){} } // 정리작업
+	   if(conn!=null) { try{conn.close(); conn=null;}catch(SQLException e){} } // 정리작업
    }
    
    // getConnect 접속
