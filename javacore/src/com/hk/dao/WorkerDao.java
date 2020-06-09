@@ -111,4 +111,27 @@ public class WorkerDao {
 		return rst;
 		
 	}
+	 public WorkerVo getWorkerById(String id) {
+	      WorkerVo temp = new WorkerVo();
+	      getConnect();
+
+	      try {
+	          String sql="SELECT * FROM WORK WHERE ID = ?";
+	          pstmt = conn.prepareStatement(sql);
+	          pstmt.setString(1, id);
+	          rs = pstmt.executeQuery();
+			if(rs.next()) {
+			     temp.setId(rs.getString("ID"));
+			     temp.setPwd(rs.getString("PWD"));
+			     temp.setName(rs.getString("NAME"));
+			     temp.setPhone(rs.getString("PHONE"));
+			  }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	      dbclose();      
+	      return temp;
+	   }
+
 }
