@@ -6,6 +6,10 @@ import javax.swing.*;
 
 public class Calulator_ extends JFrame{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JPanel pan1 = new JPanel();
 	
 	public Calulator_() {

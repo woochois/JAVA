@@ -6,6 +6,10 @@ import javax.swing.*;
 
 public class Calculator__ extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String cal[] = { "7", "8", "9", "-", "4", "5", "6", "+", "1", "2", "3", "*", "0", ".", "=", "/" };
 
 	public Calculator__() {
@@ -37,6 +41,7 @@ public class Calculator__ extends JFrame {
 	}
 
 	public static void main(String args[]) {
-		Calculator__ start = new Calculator__();
+		new Calculator__();
 	}
+
 }
